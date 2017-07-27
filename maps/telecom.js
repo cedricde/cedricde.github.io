@@ -47,7 +47,7 @@ function createOverlay(map) {
                              info.duree + " jours)<br />" +
                     "Adresse: " + info.voie + "<br />" +
                     "Entreprise: " + info.entreprise + "<br />" +
-                    info.nature));
+                    "Nature des travaux: " + info.nature));
             },
             
             attribution: '<a href="https://data.toulouse-metropole.fr">Toulouse Métropole</a>',
