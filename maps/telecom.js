@@ -18,7 +18,7 @@ function createBaseLayer(map) {
 
 function createOverlay(map) {
     // prepare query
-    var query = "http://data.toulouse-metropole.fr/api/v2/catalog/datasets/chantiers-en-cours/exports/geojson";
+    var query = "https://data.toulouse-metropole.fr/api/v2/catalog/datasets/chantiers-en-cours/exports/geojson";
     var queryParams = {
         where: Object.keys(OPERATORS).map(function(v) { return 'declarant = "' + v + '"'; }).join(" OR "),
         rows: -1
