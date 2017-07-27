@@ -34,7 +34,7 @@ function createOverlay(map) {
                 return L.circleMarker(latlng, {
                     color: OPERATORS[info.declarant].color,
                     fill: true,
-                    radius : 4
+                    radius : 8
                 });
             },
             
