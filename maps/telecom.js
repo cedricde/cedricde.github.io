@@ -49,6 +49,8 @@ function createOverlay(map) {
                     "Entreprise: " + info.entreprise + "<br />" +
                     info.nature));
             },
+            
+            attribution: '<a href="https://data.toulouse-metropole.fr">Toulouse Métropole</a>',
         }).addTo(map);
     });
 }
