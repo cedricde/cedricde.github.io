@@ -10,9 +10,18 @@
     <script src="leaflet-providers-1.1.17/leaflet-providers.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
     <script src="telecom.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #mapid {
+            height: 100%;
+        }
+    </style>
   </head>
   <body>
-    <div id="mapid" style="height: 400px"></div>
+    <div id="mapid"></div>
     <script>
       drawMap();
     </script>
