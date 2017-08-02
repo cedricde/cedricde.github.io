@@ -4,7 +4,7 @@ var OPERATORS = {
   "FREE":   { desc: "Free",   color: "purple" },
   "ORANGE": { desc: "Orange", color: "orange" },
   "SFR":    { desc: "SFR",    color: "red"    },
-  "FTTH":   { desc: "Autre",  color: "gray"   },
+  "FTTH":   { desc: "FTTH",   color: "gray"   },
 };
 
 
