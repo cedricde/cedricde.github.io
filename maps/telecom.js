@@ -20,7 +20,7 @@ function createOverlay(map) {
     // prepare query
     var query = "https://data.toulouse-metropole.fr/api/v2/catalog/datasets/chantiers-en-cours/exports/geojson";
     var queryParams = {
-        where: Object.keys(OPERATORS).map(function(v) { return 'declarant = "' + v + '"'; }).join(" OR "),
+        where: Object.keys(OPERATORS).map(function(v) { return 'declarant = "' + v + '"'; }).concat('nature: "Telecom").join(" OR "),
         rows: -1
     };
     
@@ -32,7 +32,7 @@ function createOverlay(map) {
                 var info = geoJsonPoint.properties;
                 
                 return L.circleMarker(latlng, {
-                    color: OPERATORS[info.declarant].color,
+                    color: (info.declarant in OPERATORS ? OPERATORS[info.declarant].color : 'green'),
                     fill: true,
                     radius : 8
                 });
@@ -40,9 +40,10 @@ function createOverlay(map) {
             
             onEachFeature: function (feature, layer) {
                 var info = feature.properties;
+                var desc = (info.declarant in OPERATORS ? OPERATORS[info.declarant].desc : "Autre (" + info.declarant + ")");
                 
                 layer.bindPopup(L.popup().setContent(
-                    "Opérateur: " + OPERATORS[info.declarant].desc + "<br />" +
+                    "Opérateur: " + desc + "<br />" +
                     "Date: " + info.datedebut + " > " + info.datefin + " (" +
                              info.duree + " jours)<br />" +
                     "Adresse: " + info.voie + "<br />" +
