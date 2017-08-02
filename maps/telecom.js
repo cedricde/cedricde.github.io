@@ -11,7 +11,7 @@ var OPERATORS = {
 function createBaseLayer(map) {
     // create OpenStreetMap layer
     L.tileLayer.provider(BASEMAP_PROVIDER, {
-        minZoom: 12,
+        minZoom: 11,
         maxZoom: 18,
     }).addTo(map);
 }
