@@ -20,7 +20,7 @@ function createOverlay(map) {
     // prepare query
     var query = "https://data.toulouse-metropole.fr/api/v2/catalog/datasets/chantiers-en-cours/exports/geojson";
     var queryParams = {
-        where: Object.keys(OPERATORS).map(function(v) { return 'declarant = "' + v + '"'; }).concat('nature: "Telecom"').join(" OR "),
+        where: Object.keys(OPERATORS).map(function(v) { return 'declarant = "' + v + '"'; }).concat('nature LIKE "Telecom"').join(" OR "),
         rows: -1
     };
     
