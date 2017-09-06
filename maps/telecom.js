@@ -1,10 +1,11 @@
 var BASEMAP_PROVIDER = 'OpenStreetMap.Mapnik'; // 'OpenStreetMap.France'
 
 var OPERATORS = {
-  "FREE":   { desc: "Free",   color: "purple" },
-  "ORANGE": { desc: "Orange", color: "orange" },
-  "SFR":    { desc: "SFR",    color: "red"    },
-  "FTTH":   { desc: "FTTH",   color: "gray"   },
+  "FREE":       { desc: "Free",   color: "purple" },
+  "FREE INFRA": { desc: "Free",   color: "purple" },
+  "ORANGE":     { desc: "Orange", color: "orange" },
+  "SFR":        { desc: "SFR",    color: "red"    },
+  "FTTH":       { desc: "FTTH",   color: "gray"   },
 };
 
 
